@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script defer src="swup.js"></script>
+    <link rel="stylesheet" href="css/transitions.css">
+    <title>Calculadora Mate</title>
+</head>
+
+<body id="swup" class="transition-fade bg-green-700 ">
+    <div class="flex flex-wrap py-1">
+        <div class="w-full px-4 ">
+            <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 rounded">
+                <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+                    <div
+                        class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
+                        <a class=" text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                            href="index.html">
+                            Calculadora de Matematicas
+                        </a>
+                    </div>
+                    <div class="flex lg:flex-grow items-center" id="example-navbar-info">
+                        <ul class="flex flex-col lg:flex-row list-none ml-auto">
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="index.html">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="integrantes.html">
+                                    Integrantes
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="#pablo">
+                                    Rubrica
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="info.html">
+                                    ¿Que es el tangram?
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="mt-3">
+        <h1 class="text-5xl h-14 text-center font-extrabold text-white">
+            ¿Que es calcular?
+          </h1>
+        <p class=" text-white mt-16 md:mt-0 mb-6 text-center">En matematicas, hacer las operaciones matemáticas necesarias <br>para averiguar el resultado, el valor o la medida de algo en expresión numérica es la referencia al calculo,<br> en este proyecto, el objetivo es calcular las figuras gemotericas que componen el tangram.</p>
+    </div>
+    <div class="block xl:flex">
+        <div class="mx-auto ">
+            <h1 class="text-center font-bold text-white text-3xl">¿Como se calcula el area?</h1>
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">1</h1>
+        </div>
+        <div class="mx-auto relative">
+            <h1 class="text-center font-bold text-white text-3xl">¿Como se calcula el perimetro?</h1>
+            <!-- <h1 class="bg-white text-black font-bold w-6 mt-2 text-center text-xl">1</h1>
+            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, enim facilis </p>
+            <h1 class="bg-white right-0 text-black font-bold w-6 mt-2 text-center text-xl">2</h1> -->
+        </div>    
+
+    </div>
+    <h1 class="text-center font-bold text-white text-3xl">Una calculadora distinta...</h1>
+    <div id="calculator" class="mx-auto">
+        <div class="rounded bg-gray-700 w-52 h-96 mt-10 mx-auto p-1">
+            <div class="rounded bg-gray-200 w-40 mx-auto my-3 ">
+                <p id="hola" class="p-6 mt-6 text-sm text-center"></p>
+            </div>
+            <div class="text-center  mt-6">
+                <form >
+                    <p class="text-white">Ingrese X dato</p>
+                    <input id="input1" class="mt-3 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                    <p class="mt-3 text-white">Ingrese X dato</p>
+                    <input id="input2" class="mt-3 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                    <button id="btn"class="text-white rounded bg-yellow-700  p-4 mt-6 hover:bg-purple-400 btn ">Calcular</button>  
+                </form> 
+                
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto">
+        <label class="text-white" for="emails">¿Que deseas calcular?</label><br>
+        <input type="email" multiple name="emails" id="emails" list="drawfemails" required size="24">
+
+            <datalist id="drawfemails">
+                <option value="Area"></option>
+                <option value="Perimetro"></option>
+            </datalist>
+            <div id="caja" class="caja w-72 h-72 bg-white mx-auto mt-4 mb-5 shadow-2xl">
+                <div class="bg-blue-500 w-6 h-28 rotate-90 mx-auto my-auto"></div>
+                <div id="pregunta" class="bg-blue-500 w-20 rounded-full mx-auto">
+                    <h1 class="font-extrabold p-4 text-3xl text-white text-center">¿?</h1>
+                </div>
+            </div>    
+   </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+<script>
+    var form = $("#calculator");
+    var txtCalc =  $("#hola");
+
+    console.log(input1)
+$('#btn').click(function(e) {
+    let input1 = $("#input1").val();
+    let input2 = $("#input2").val();
+    let sum = parseInt(input1) + parseInt(input2);
+    e.preventDefault();
+        $(form).addClass('calculator');
+
+    setTimeout(()=>{
+
+        txtCalc.html(sum); 
+        $(form).removeClass('calculator');  
+    }, 1800);
+
+       
+});
+</script>
+
+
+</body>
+
+</html>

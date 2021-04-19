@@ -1,0 +1,47 @@
+.transition-fade {
+    opacity:1;
+    transition: 500ms;
+    transform: translateX(0);
+}
+
+html.is-animating .transition-fade{
+    opacity: 0;
+    transform: translateX(100%);
+}
+html.is-leaving .transition-fade{
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.calculator{
+    animation: calculator 1.8s linear   ;
+    z-index: 1;
+}
+
+@keyframes calculator {
+    0%{
+        transform: translateY(0px);
+        opacity: 0.8;
+        display: none;
+    }
+    50%{
+        transform: translateY(450px);
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        display: block;
+    }
+}
+.caja{
+    transform: rotate(360deg);
+}
+#pregunta{
+    box-shadow: 10px 10px grey;
+}
