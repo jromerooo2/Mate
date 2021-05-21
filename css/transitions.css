@@ -1,18 +1,14 @@
-.transition-fade {
-    opacity:1;
-    transition: 500ms;
-    transform: translateX(0);
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(../assets/Gotham-Bold.woff);
 }
 
-html.is-animating .transition-fade{
-    opacity: 0;
-    transform: translateX(100%);
+h1{
+    font-family: Gotham-Bold;
 }
-html.is-leaving .transition-fade{
-    opacity: 0;
-    transform: translateX(0);
+a{
+    font-family: Gotham-Bold;
 }
-
 .rotate-90 {
     transform: rotate(90deg);
 }
