@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/transitions.css">
+    <script src="js/main.js"></script>
     <title>Calculadora Mate</title>
 </head>
 
@@ -89,17 +90,36 @@
 
     </div>
     <h1 class="text-center font-bold text-white text-3xl mt-5">Una calculadora distinta...</h1>
+    <div class="text-center mt-4">
+        <label class="text-white" for="operacion">Escoge una operacion:</label><br>
+        <select class="mt-2" name="operacion" id="op">
+           <option value="area">Area</option>
+           <option value="perimetro">Perimetro</option>
+        </select><br>
+
+        <label class="text-white" for="operacion">Escoge una figura:</label><br>
+
+        <select class="mt-2" name="operacion" id="opF">
+           <option value="paralelogramo" >Paralelogramo</option>
+           <option value="cuadrado">Cuadrado</option>
+           <option value="triangulo">Triangulo</option>
+        </select>
+    </div>
+
+
     <div id="calculator" class="mx-auto">
         <div class="rounded bg-gray-700 w-52 h-96 mt-10 mx-auto p-1">
             <div class="rounded bg-gray-200 w-40 mx-auto my-3 ">
                 <p id="hola" class="p-6 mt-6 text-sm text-center"></p>
             </div>
             <div class="text-center  mt-6">
-                <form class="p-22">
-                    <p class="text-white">Ingrese X dato</p>
+                <form >
+                    <p id="text-change"class="text-white">Ingrese la base </p>
                     <input id="input1" class="mt-3 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
-                    <p class="mt-3 text-white">Ingrese X dato</p>
+                    <p id="text-change2" class="mt-3 text-white">Ingrese la altura</p>
                     <input id="input2" class="mt-3 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                    <p id="text-change3" class=" text-change3 mt-3 text-white">Ingrese la altura</p>
+                    <input id="input3" class=" input-3 mt-3 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
                     <button id="btn"class="text-white rounded bg-yellow-700  p-4 mt-6 hover:bg-purple-400 btn ">Calcular</button>  
                 </form> 
                 
@@ -114,31 +134,8 @@
                 </div>
             </div>    
    </div>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-<script>
-    var form = $("#calculator");
-    var txtCalc =  $("#hola");
-
-    console.log(input1)
-$('#btn').click(function(e) {
-    let input1 = $("#input1").val();
-    let input2 = $("#input2").val();
-    let sum = parseInt(input1) + parseInt(input2);
-    e.preventDefault();
-        $(form).addClass('calculator');
-
-    setTimeout(()=>{
-
-        txtCalc.html(sum); 
-        $(form).removeClass('calculator');  
-    }, 1800);
-
-       
-});
-</script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="js/main.js"></script>
 
 
 </body>

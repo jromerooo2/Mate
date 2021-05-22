@@ -3,6 +3,12 @@
     src: url(../assets/Gotham-Bold.woff);
 }
 
+.input-3{
+ display: none;
+}
+.text-change3{
+    display: none;
+}
 h1{
     font-family: Gotham-Bold;
 }
