@@ -1,9 +1,3 @@
-var form = $("#calculator");
-var txtCalc =  $("#hola");
-
-
-        console.log(input1)
-        //Animacion
         $('#opF').change(function() {
             //alert('hols');
             let opF = $("#opF").val();
@@ -60,30 +54,69 @@ var txtCalc =  $("#hola");
                 $("#text-change3").show(); 
             }
         });
-
+    
+        //Animacion
   $('#btn').click(function(e) {
+      
+            var form = $("#calculator");
+            var txtCalc =  $("#hola");
             let b = $("#input1").val();
             let h = $("#input2").val();
-             
+            let c = $("#input3").val();
             let op = $("#op").val();
             let opF = $("#opF").val();
             let rtrn = 0;
 
+
             if (op === "area" && opF === "triangulo") {
-                rtrn = (b*h)/2;
+                if (b && h) {
+                    rtrn = (b*h)/2;
+                }else{
+                    alert("Hacen falta datos")
+                    return;
+                }
+               
             }
             
             if (op === "area" && opF === "cuadrado" || op === "area" && opF === "paralelogramo") {
-                rtrn = b * h;
+                if (b && h) {
+                    rtrn = b * h;
+                }else{
+                    alert("Hacen falta datos")
+                    return;
+                }
+                
             }
 
-            if (op === "perimetro" && opF === "paralelogramo") {     
-                 let sum = parseInt(b) + parseInt(h) ;
-                //  alert(sum);
-                 rtrn = sum * 2;
+            if (op === "perimetro" && opF === "paralelogramo"  ) {     
+                if (b && h) {
+                    let sum = parseInt(b) + parseInt(h);
+                    //  alert(sum);
+                     rtrn = sum * 2;
+                }else{
+                    alert("Hacen falta datos")
+                    return;
+                }
+
             }
             if (op === "perimetro" && opF === "cuadrado") {     
-                rtrn = 4 * b;
+                if (b) {
+                    rtrn = 4 * b;
+                }else{
+                    alert("Hacen falta datos")
+                    return;
+                }
+                
+           }
+
+           if (op === "perimetro" && opF === "triangulo") {
+            if (b && h && c) {
+                rtrn = parseInt(b) + parseInt(h) + parseInt(c);
+            }else{
+                alert("Hacen falta datos")
+                return;
+            }
+              
            }
 
             // let sum = parseInt(input1) + parseInt(input2);
@@ -91,7 +124,7 @@ var txtCalc =  $("#hola");
             e.preventDefault();
             //alert(op);
 
-
+          
             $(form).addClass('calculator');
 
             setTimeout(()=>{
