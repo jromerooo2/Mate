@@ -16,14 +16,20 @@ var txtCalc =  $("#hola");
                 $("#text-change").html("Ingrese la base");
                 $("#text-change2").html("Ingrese la altura")
             }
-            if (op === "perimetro" && opF === "cuadrado" ) {
+            if (op === "perimetro" && opF === "cuadrado") {
                 $("#input2").hide();
                 $("#text-change2").hide(); 
             }
-            if (op === "perimetro" && opF === "triangulo" ) {
-                
+
+            if (opF === "triangulo" && op === "perimetro" ) {
+                $("#input2").show();
+                $("#text-change2").show();
                 $("#input3").show();
                 $("#text-change3").show();
+                
+                $("#text-change").html("Ingrese el lado 1");
+                $("#text-change2").html("Ingrese el lado 2");
+                $("#text-change3").html("Ingrese el lado 3")
             }else{
                 $("#input3").hide();
                 $("#text-change3").hide();
@@ -40,14 +46,14 @@ var txtCalc =  $("#hola");
             let op = $("#op").val();
             if (op === "area") {
                 $("#input2").show();
-                $("#text-change1").show();
+                $("#text-change2").show();
 
                 $("#input3").hide();
                 $("#text-change3").hide(); 
             }
             if (op === "perimetro" && opF === "cuadrado") {
                 $("#input2").hide();
-                $("#text-change1").hide(); 
+                $("#text-change2").hide(); 
             }
             if (op === "perimetro" && opF === "triangulo") {
                 $("#input3").show();
@@ -58,6 +64,7 @@ var txtCalc =  $("#hola");
   $('#btn').click(function(e) {
             let b = $("#input1").val();
             let h = $("#input2").val();
+             
             let op = $("#op").val();
             let opF = $("#opF").val();
             let rtrn = 0;
