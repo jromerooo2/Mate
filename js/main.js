@@ -124,14 +124,9 @@
             e.preventDefault();
             //alert(op);
 
-          
-            $(form).addClass('calculator');
-
-            setTimeout(()=>{
-
                 txtCalc.html(rtrn); 
-                $(form).removeClass('calculator');  
-            }, 1800);
+                 
+           
 
         });
 
