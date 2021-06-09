@@ -12,7 +12,7 @@
     <title>Calculadora Mate</title>
 </head>
 
-<body class="transition-fade bg-pink-300 ">
+<body class="transition-fade bg-green-700 ">
     <div class="flex flex-wrap py-1">
         <div class="w-full px-4 ">
             <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 rounded">
@@ -21,31 +21,105 @@
                         class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
                         <a class=" text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                             href="index.html">
-                             Area y Perimetro con  <br> Figuras del Tangram
+                            Calculadora de Area <br> y Perimetro con  <br> Figuras del Tangram
                         </a>
+                    </div>
+                    <div class="flex lg:flex-grow items-center" id="example-navbar-info">
+                        <ul class="flex flex-col lg:flex-row list-none ml-auto">
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="index.html">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="integrantes.html">
+                                    Integrantes
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="#pablo">
+                                    Rubrica
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    href="info.html">
+                                    ¿Que es el tangram?
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
-
-    <h1 class="text-center font-bold text-black text-3xl mt-5">Nuestra Calculadora</h1>
-    
-    <div class="mx-auto w-64 h-64">
-        <label class="text-black" for="operacion">Que deseas conocer ?</label><br>
-        <select class="mt-2" name="operacion" id="op">
-               <option value="area">Area</option>
-               <option value="perimetro">Perimetro</option>
-            </select><br>
-    
-            <label class="text-black" for="operacion">¿De que figura?</label><br>
-    
-            <select class="mt-2" name="operacion" id="opF">
-               <option value="paralelogramo" >Paralelogramo</option>
-               <option value="cuadrado">Cuadrado</option>
-               <option value="triangulo">Triangulo</option>
-            </select>
+    <div class="mt-3">
+        <h1 class="text-5xl h-14 text-center font-extrabold text-white">
+            ¿Que es <span class="text-red-400">calcular</span>?
+          </h1>
+        <p class=" text-white mt-16 md:mt-0 mb-6 text-center">En matematicas, hacer las operaciones matemáticas necesarias <br>para averiguar el resultado, el valor o la medida de algo en expresión numérica es la referencia al calculo,<br> en este proyecto, el objetivo es calcular el area y perimetro de las figuras que componen el tangram.</p>
     </div>
+    <div class="block xl:flex ">
+        <div class="mx-auto mt-5 block ">
+            <h1 class="text-center font-bold text-white text-3xl">¿Como se calcula el <span class="text-purple-300"> área</span>?</h1>
+            <div class="flex justify-start ">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">1</h1>
+                <p class="text-white mt-2 ml-2 text-center">Identificamos la figura y la formula.</p>
+            </div>
+            
+            <div class="flex justify-between">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">2</h1>
+                <p class="text-white mt-2 ml-2">Sustituimos la formula con los valores.</p>
+            </div>
+            <div class="flex justify-start">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">3</h1>
+                <p class="text-white mt-2 ml-2">Realizamos las operaciones necesarias.</p>
+            </div>
+            <div class="flex justify-start">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">4</h1>
+                <p class="text-white mt-2 ml-2">Obtenemos el resultado.</p>
+            </div>
+            
+        </div>
+        <div class="mx-auto mt-5 text-center">
+            <h1 class="font-bold text-white text-3xl">¿Como se calcula el <span class="text-yellow-200"> perímetro</span>?</h1>
+            <div class="flex justify-start">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">1</h1>
+                <p class="text-white mt-2 ml-2">Identificamos la figura .</p>
+            </div>
+            
+            <div class="flex justify-start">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">2</h1>
+                <p class="text-white mt-2 ml-2">Realizamos la suma según la formula.</p>
+            </div>
+            <div class="flex justify-start">
+                <h1 class="bg-white rounded-full text-black font-bold w-6 mt-2 text-center">3</h1>
+                <p class="text-white mt-2 ml-2">Obtenemos el resultado.</p>
+            </div>
+
+        </div>
+
+    </div>
+    <h1 class="text-center font-bold text-white text-3xl mt-5">Una calculadora distinta...</h1>
+    <div class="text-center mt-4">
+        <label class="text-white" for="operacion">¿Que deseas conocer?</label><br>
+        <select class="mt-2" name="operacion" id="op">
+           <option value="area">Area</option>
+           <option value="perimetro">Perimetro</option>
+        </select><br>
+
+        <label class="text-white" for="operacion">¿De que figura?</label><br>
+
+        <select class="mt-2" name="operacion" id="opF">
+           <option value="paralelogramo" >Paralelogramo</option>
+           <option value="cuadrado">Cuadrado</option>
+           <option value="triangulo">Triangulo</option>
+        </select>
+    </div>
+
 
     <div id="calculator" class="mx-auto">
         <div class="rounded bg-gray-700 w-64 h-auto mt-10 mx-auto p-1">
@@ -66,7 +140,17 @@
             </div>
         </div>
     </div>
+    <!--INICIO CAJA -->
+    <div class="mx-auto mt-28">
+            <div id="caja" class="caja w-80 h-72 bg-white mx-auto mt-4 mb-5 shadow-2xl">
+                
+                <div class="bg-blue-500 w-6 h-28 rotate-90 mx-auto my-auto"></div>
+                <div id="pregunta" class="bg-blue-500 w-20 rounded-full mx-auto">
+                    <h1 class="font-extrabold p-4 text-3xl text-white text-center">¿?</h1>
+                </div>
 
+            </div>    
+   </div>
   <script type="text/javascript" 
         src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
    <script src="js/main.js"></script>
